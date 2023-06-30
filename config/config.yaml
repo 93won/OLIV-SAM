@@ -1,0 +1,57 @@
+%YAML:1.0
+#lidar_folder: /home/seungwon/Data/maxst/b2/pcd_1_xyzinormal
+#image_folder: /home/seungwon/Data/maxst/b2/img_1
+#match_save_dir: /home/seungwon/Data/maxst/b2/matched
+#imu_path: /home/seungwon/Data/maxst/b2/imu_1/data.txt
+lidar_folder: /home/maxst/MAXST/Data/LVI-SAM/yangjae/pcds
+image_folder: /home/maxst/MAXST/Data/LVI-SAM/yangjae/erp
+match_save_dir: /home/maxst/MAXST/Data/matched
+imu_path: /home/maxst/MAXST/Data/imu_1/data.txt
+id: 0
+last: 2000
+
+
+
+# lidar
+max_distance: 20.0
+min_distance: 0.3
+voxel_size: 0.4
+
+num_cumulated_cloud: 1
+
+distance_threshold: 1.0     # (threshold) length of side of triangle 
+distance_ratio_threshold: 0.0 # min_side_length / max_side_length
+
+# image
+max_distance_cam: 10.0
+min_distance_cam: 2.0
+image_width: 1280
+image_height: 1024
+
+# Feature Extraction (Lidar)
+max_distance_near_features: 5.0
+max_distance_plane: 0.1
+
+# Feature Extraction (Camera)
+feature_type: ORB
+num_features: 1000
+num_features_tracking_lost_threshold: 30
+num_features_tracking_keyframe_threshold: 100
+
+score_threshold: 0.02
+rel_pose_thresh: 0.5
+
+# estimator
+obs_count_ratio: 0.1
+
+match_threshold: 50
+loop_frame_th: 10
+knn_ratio: 0.7
+
+window_size: 10
+keyframe_min_dist_threshold: 1.0
+
+
+
+# optical flow
+maxLevelPyramid: 2
